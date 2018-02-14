@@ -1,0 +1,58 @@
+{
+  "name": "trailblazer",
+  "version": "0.0.0",
+  "description": "A pragmatic implementation of TrailsJS for rapid development",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/babel-cli/bin/babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamrizzi/trailblazer.git"
+  },
+  "keywords": [
+    "trails",
+    "trailsjs",
+    "node",
+    "nodejs",
+    "express",
+    "server",
+    "api",
+    "rest"
+  ],
+  "author": "Jam Risser <jam@jamrizzi.com> (https://jam.jamrizzi.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamrizzi/trailblazer/issues"
+  },
+  "homepage": "https://github.com/jamrizzi/trailblazer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "date-fns": "^1.29.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-custom-response": "^0.1.1",
+    "lodash": "^4.17.5",
+    "trailpack-express": "git+https://github.com/jamrizzi/trailpack-express#v3",
+    "trailpack-repl": "^3.0.2",
+    "trailpack-router": "^3.1.4",
+    "trails": "^3.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-node6": "^11.0.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "node6",
+      "stage-2"
+    ]
+  }
+}
