@@ -4,6 +4,8 @@ import expressCustomResponse from 'express-custom-response';
 import path from 'path';
 import { addYears, format } from 'date-fns';
 
+expressCustomResponse(path.resolve(__dirname, '..', 'api', 'responses'));
+
 const { env } = process;
 
 export default {
@@ -15,7 +17,6 @@ export default {
   },
 
   init: app => {
-    expressCustomResponse(path.join(__dirname, '..', 'api', 'responses'));
     app.log.info('app started');
   },
 

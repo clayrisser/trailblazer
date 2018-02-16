@@ -8,6 +8,7 @@
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
+    "yoda": "off",
     "no-unused-vars": [
       "warn",
       {

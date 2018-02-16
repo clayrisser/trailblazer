@@ -4,7 +4,7 @@ import trailpackRepl from 'trailpack-repl';
 import trailpackRouter from 'trailpack-router';
 
 export default {
-  packs: [trailpackRepl, trailpackRouter, trailpackExpress],
+  packs: [trailpackRouter, trailpackRepl, trailpackExpress],
 
   paths: {
     root: path.resolve(__dirname, '..'),

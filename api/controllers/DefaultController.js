@@ -1,4 +1,4 @@
-import { Controller } from 'trails';
+import Controller from 'trails/lib/Controller';
 
 export default class DefaultController extends Controller {
   async info(req, res, next) {
@@ -12,7 +12,7 @@ export default class DefaultController extends Controller {
 
   api(req, res, next) {
     try {
-      return res.sucess('Hello Trailblazer!');
+      return res.success('Hello Trailblazer!');
     } catch (err) {
       return next(err);
     }
@@ -20,7 +20,7 @@ export default class DefaultController extends Controller {
 
   v1(req, res, next) {
     try {
-      return res.sucess('Hello Trailblazer v1!');
+      return res.success('Hello Trailblazer v1!');
     } catch (err) {
       return next(err);
     }

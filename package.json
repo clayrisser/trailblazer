@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/jamrizzi/trailblazer/issues"
   },
-  "homepage": "https://github.com/jamrizzi/trailblazer#readme",
+  "homepage": "https://github.com/jamrizzi/trailblazer",
   "dependencies": {
     "body-parser": "^1.18.2",
     "date-fns": "^1.29.0",
@@ -33,7 +33,7 @@
     "express": "^4.16.2",
     "express-custom-response": "^0.1.1",
     "lodash": "^4.17.5",
-    "trailpack-express": "git+https://github.com/jamrizzi/trailpack-express#v3",
+    "trailpack-express": "git+https://github.com/trailsjs/trailpack-express#v3",
     "trailpack-repl": "^3.0.2",
     "trailpack-router": "^3.1.4",
     "trails": "^3.0.3"
@@ -50,7 +50,14 @@
   },
   "babel": {
     "presets": [
-      "env",
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
       "node6",
       "stage-2"
     ]
