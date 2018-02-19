@@ -2,17 +2,17 @@ export default [
   {
     method: 'GET',
     path: '/',
-    handler: 'DefaultController.api'
+    handler: 'DefaultController.info'
   },
   {
     method: 'GET',
     path: '/api',
-    handler: 'DefaultController.api'
+    handler: 'DefaultController.info'
   },
   {
     method: 'GET',
     path: '/api/v1',
-    handler: 'DefaultController.v1'
+    handler: 'DefaultController.info'
   },
   {
     method: 'GET',

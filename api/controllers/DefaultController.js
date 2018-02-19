@@ -9,20 +9,4 @@ export default class DefaultController extends Controller {
       return next(err);
     }
   }
-
-  api(req, res, next) {
-    try {
-      return res.success('Hello Trailblazer!');
-    } catch (err) {
-      return next(err);
-    }
-  }
-
-  v1(req, res, next) {
-    try {
-      return res.success('Hello Trailblazer v1!');
-    } catch (err) {
-      return next(err);
-    }
-  }
 }

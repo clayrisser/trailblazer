@@ -72,3 +72,4 @@ idea/
 
 # Application
 .tmp/
+dist/

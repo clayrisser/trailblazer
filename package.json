@@ -4,7 +4,10 @@
   "description": "A pragmatic implementation of TrailsJS for rapid development",
   "main": "index.js",
   "scripts": {
-    "start": "node node_modules/babel-cli/bin/babel-node server.js"
+    "lint": "node node_modules/eslint/bin/eslint ./",
+    "start": "node node_modules/nodemon/bin/nodemon -e js -x 'npm run lint && npm run serve || exit 1'",
+    "serve": "node node_modules/babel-cli/bin/babel-node --ignore node_modules server.js",
+    "build": "node node_modules/babel-cli/bin/babel --ignore node_modules ./ -d dist"
   },
   "repository": {
     "type": "git",
@@ -42,11 +45,12 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-node6": "^11.0.0",
     "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-config-prettier": "^2.9.0"
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.15.1"
   },
   "babel": {
     "presets": [
@@ -58,8 +62,10 @@
           }
         }
       ],
-      "node6",
       "stage-2"
     ]
-  }
+  },
+  "eslintIgnore": [
+    "dist"
+  ]
 }
