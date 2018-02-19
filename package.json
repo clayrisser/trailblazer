@@ -4,10 +4,11 @@
   "description": "A pragmatic implementation of TrailsJS for rapid development",
   "main": "index.js",
   "scripts": {
-    "lint": "node node_modules/eslint/bin/eslint ./",
-    "start": "node node_modules/nodemon/bin/nodemon -e js -x 'npm run lint && npm run serve || exit 1'",
-    "serve": "node node_modules/babel-cli/bin/babel-node --ignore node_modules server.js",
-    "build": "node node_modules/babel-cli/bin/babel --ignore node_modules ./ -d dist"
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "start": "nodemon -e js -x 'npm run lint && npm run serve || exit 1'",
+    "serve": "babel-node --ignore node_modules server.js",
+    "build": "babel --ignore node_modules ./ -d dist"
   },
   "repository": {
     "type": "git",
@@ -65,7 +66,5 @@
       "stage-2"
     ]
   },
-  "eslintIgnore": [
-    "dist"
-  ]
+  "eslintIgnore": ["dist"]
 }
