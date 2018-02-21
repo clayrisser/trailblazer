@@ -34,6 +34,7 @@
   "homepage": "https://github.com/jamrizzi/trailblazer",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "boom": "^7.1.1",
     "date-fns": "^1.29.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
@@ -72,5 +73,10 @@
       "stage-2"
     ]
   },
-  "eslintIgnore": ["dist"]
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "eslintIgnore": [
+    "dist"
+  ]
 }
