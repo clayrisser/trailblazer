@@ -1,4 +1,4 @@
-import { en } from './locals';
+import { en } from './locales';
 
 export default {
   lng: 'en',
