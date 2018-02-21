@@ -1,4 +1,4 @@
-import Controller from 'trails/lib/Controller';
+import Controller from 'trails/controller';
 
 export default class DefaultController extends Controller {
   async info(req, res, next) {

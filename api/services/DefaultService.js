@@ -1,4 +1,4 @@
-import Service from 'trails/lib/Service';
+import Service from 'trails/service';
 import _ from 'lodash';
 
 export default class DefaultService extends Service {

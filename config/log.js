@@ -1,3 +1,14 @@
+import winston from 'winston';
+
 export default {
-  level: 'info'
+  logger: new winston.Logger({
+    level: 'info',
+    exitOnError: false,
+    transports: [
+      new winston.transports.Console({
+        prettyPrint: true,
+        colorize: true
+      })
+    ]
+  })
 };
