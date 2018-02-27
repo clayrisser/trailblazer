@@ -1,16 +1,14 @@
 import _ from 'lodash';
 
-module.exports = function success(payload, message) {
-  if (!message) {
-    if (_.isString(payload)) {
-      return this.json({
-        message: payload
-      });
+module.exports = function success(payload, message, meta) {
+  if (_.isUndefined(payload)) {
+    if (_.isString(message)) {
+      return this.json({ message });
     }
-    message = 'Response successful';
+    return this.json({
+      message: '',
+      payload: message
+    });
   }
-  return this.json({
-    message,
-    payload
-  });
+  return this.json({ message: message.toString(), payload, ...meta });
 };

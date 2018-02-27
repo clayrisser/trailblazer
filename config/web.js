@@ -34,6 +34,9 @@ export default {
       'errorHandler'
     ],
     bodyParser: [bodyParser.json(), bodyParser.urlencoded({ extended: false })],
+    404(req, res) {
+      return res.status(404).json({ message: 'page not found' });
+    },
     errorHandler(err, req, res, __) {
       if (err) return res.error(err);
       return res.error(new Error('Unknown error'));
